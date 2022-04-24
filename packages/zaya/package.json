@@ -1,0 +1,27 @@
+{
+  "name": "zaya",
+  "version": "0.0.2",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "zaya": "./bin/index.js"
+  },
+  "scripts": {
+    "build": "pnpm esbuild src/** --bundle --outdir=lib",
+    "dev": "pnpm build --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zxy7/zaya.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zxy7/zaya/issues"
+  },
+  "homepage": "https://github.com/zxy7/zaya#readme",
+  "dependencies": {
+    "commander": "^9.2.0"
+  }
+}

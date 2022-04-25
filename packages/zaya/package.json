@@ -7,8 +7,8 @@
     "zaya": "./bin/index.js"
   },
   "scripts": {
-    "build": "pnpm esbuild src/** --bundle --outdir=lib",
-    "dev": "pnpm build --watch"
+    "build": "pnpm esbuild src/** --bundle --outdir=lib --platform=node",
+    "dev": "zaya dev"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,10 @@
   },
   "homepage": "https://github.com/zxy7/zaya#readme",
   "dependencies": {
-    "commander": "^9.2.0"
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.25",
+    "commander": "^9.2.0",
+    "esbuild": "^0.14.36",
+    "express": "^4.17.3"
   }
 }

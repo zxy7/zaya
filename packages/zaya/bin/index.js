@@ -5,7 +5,6 @@ const { program } = require('commander')
 program.version(require('../package.json').version,'-v, -V, --version', 'output the current version')
 .description('这是zaya')
 .usage('<command> [options]')
-.parse(process.argv)
 
 program.command('help')
 .alias('-h')
@@ -20,4 +19,13 @@ program.command('help')
 
 Example call:
     $ zaya <command> --help`)
-    }).parse(process.argv);
+    })
+
+program.command('dev').description('框架开发命令').action(function() {
+  const {
+      dev
+  } = require('../lib/dev');
+  dev();
+});
+
+program.parse(process.argv);

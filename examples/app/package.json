@@ -5,12 +5,19 @@
   "main": "index.js",
   "scripts": {
     "start": "zaya",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "pnpm esbuild src/** --bundle --outdir=www",
+    "dev": "pnpm build --watch",
+    "serve": "cd www && serve"
   },
   "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "zaya": "workspace:*"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "^13.0.2"
+  }
 }

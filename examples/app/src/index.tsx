@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
+
 const Hello = () => {
     const [text, setText] = React.useState('Hello Zaya!');
     return (<span
@@ -7,5 +8,6 @@ const Hello = () => {
             setText('Hi!')
         }}> {text} </span>);
 };
-const root = ReactDOM.createRoot(document.getElementById('zaya'));
+
+const root = ReactDOM.createRoot(document.getElementById('zaya')!);
 root.render(React.createElement(Hello));

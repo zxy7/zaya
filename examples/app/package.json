@@ -6,7 +6,7 @@
   "scripts": {
     "start": "zaya",
     "build": "pnpm esbuild src/** --bundle --outdir=www",
-    "dev": "pnpm build --watch",
+    "dev": "zaya dev",
     "serve": "cd www && serve"
   },
   "dependencies": {
@@ -18,6 +18,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/react": "^18.0.8",
+    "@types/react-dom": "^18.0.0",
     "serve": "^13.0.2"
   }
 }
